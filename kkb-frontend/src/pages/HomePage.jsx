@@ -46,14 +46,14 @@ function HomePage() {
   };
 
   const createRoom = () => {
-    const generatedRoom = Math.random().toString(36).substring(2, 8);
-    history.push('/room/${generatedRoom}');
+    const roomCode= Math.random().toString(36).substring(2, 8);
+    history.push(`/room/${roomCode}`);
   };
 
   const joinRoom = () => {
     if (!roomCode) return;
 
-    history.push('/room/${roomCode}');
+    history.push(`/room/${roomCode}`);
   };
 
   return (
