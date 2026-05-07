@@ -22,9 +22,11 @@ function App() {
             <HomePage />
           </Route>
 
-          <Route exact path="/room/:roomId">
-            <ExpenseRoomPage />
-          </Route>
+          <Route
+            exact
+            path="/room/:roomCode"
+            component={ExpenseRoomPage}
+            />
 
           <Route exact path="/">
             <Redirect to="/home" />

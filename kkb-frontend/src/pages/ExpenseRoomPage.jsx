@@ -16,13 +16,15 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
-import { useHistory } from 'react-router-dom';
+
+import { useHistory, useParams } from 'react-router-dom';
 
 import { useEffect, useMemo, useState } from 'react';
 
 export default function ExpenseRoomPage() {
 
   const history = useHistory();
+  const { roomCode } = useParams();
 
   // Participants
   const [participants, setParticipants] = useState([]);
@@ -242,7 +244,7 @@ export default function ExpenseRoomPage() {
       <IonHeader>
         <IonToolbar>
           <IonTitle>
-            Barkada Trip
+             {roomCode}
           </IonTitle>
         </IonToolbar>
       </IonHeader>
